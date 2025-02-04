@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const { consultarAPI, procesarRespuesta } = require("./DB/consultas");
-const { generatePdfFromData } = require("./functions/crearPDF.js");
+//const { generatePdfFromData } = require("./functions/crearPDF.js");
 const { API_URLS, apigeneral } = require("./DB/dataapp");
 const { checkEmailExists, getCreditosFromCache } = require("./DB/consultas-BD");
 const {
