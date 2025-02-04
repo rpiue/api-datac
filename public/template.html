@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar PDF</title>
+    <style>
+        body {
+            background-color: #2b5a8e;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            width: 1215px;
+            height: 965px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .datos {
+            flex: 1;
+            min-width: 500px;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 0px;
+            font-size: 30px;
+            padding: 0px;
+
+        }
+
+        .imgs {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imgs img {
+            max-width: 350px;
+            /* Ajusta el tamaño según necesites */
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        .div-imgs {
+            width: 350px;
+            padding: 20px;
+            margin: 10px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DATA CODEX</h1>
+    <div class="container">
+        <div class="datos">
+            <p><strong>Documento nacional de identidad:</strong>
+                <%= dni %>
+            </p>
+            <p><strong>Primer Apellido:</strong>
+                <%= apellido_paterno %>
+            </p>
+            <p><strong>Segundo Apellido:</strong>
+                <%= apellido_materno %>
+            </p>
+            <p><strong>Prenombres:</strong>
+                <%= nombres %>
+            </p>
+            <p><strong>Género:</strong>
+                <%= genero %>
+            </p>
+            <p><strong>Nacimiento:</strong>
+                <%= fecha_nacimiento %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Fecha:</strong>
+                <%= fecha_nacimiento %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Departamento:</strong>
+                <%= departamento %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Provincia:</strong>
+                <%= provincia %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Distrito:</strong>
+                <%= distrito %>
+            </p>
+            <p><strong>Grado de instrucción:</strong>
+                <%= grado_instruccion %>
+            </p>
+            <p><strong>Estado Civil:</strong>
+                <%= estado_civil %>
+            </p>
+            <p><strong>Estatura:</strong>
+                <%= estatura %>
+            </p>
+            <p><strong>Fecha de Inscripción:</strong>
+                <%= fecha_inscripcion %>
+            </p>
+            <p><strong>Fecha de Emisión:</strong>
+                <%= fecha_emision %>
+            </p>
+            <p><strong>Fecha de Caducidad:</strong>
+                <%= fecha_caducidad %>
+            </p>
+            <p><strong>Nombre del Padre:</strong>
+                <%= padre %>
+            </p>
+            <p><strong>Nombre de la Madre:</strong>
+                <%= madre %>
+            </p>
+            <p><strong>Restricción:</strong>
+                <%= restriccion %>
+            </p>
+            <p><strong>Dirección:</strong>
+                <%= direccion_n %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Departamento:</strong>
+                <%= departamento_n %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Provincia:</strong>
+                <%= provincia_n %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Distrito:</strong>
+                <%= distrito_n %>
+            </p>
+            <p><strong>Ubicación:</strong>
+                <%= ubigeo_reniec %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Ubigeo INEI:</strong>
+                <%= ubigeo_inei %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Ubigeo Sunat:</strong>
+                <%= ubigeo_sunat %>
+            </p>
+            <p style="padding-left: 30px;"><strong>Código Postal:</strong>
+                <%= codigo_postal %>
+            </p>
+            
+        </div>
+        <div class="imgs">
+            <div class="div-imgs">
+                <img src="data:image/jpeg;base64,<%= imagen1 %>" alt="Imagen 1">
+
+            </div>
+            <div class="div-imgs">
+                <img src="data:image/jpeg;base64,<%= imagen2 %>" alt="Imagen 1">
+
+            </div>
+            <div class="div-imgs">
+                <img src="data:image/jpeg;base64,<%= imagen3 %>" alt="Imagen 1">
+            </div>
+            <div class="div-imgs">
+                <img src="data:image/jpeg;base64,<%= imagen4 %>" alt="Imagen 1">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
